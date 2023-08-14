@@ -1,0 +1,29 @@
+create database blood_bank;
+use blood_bank;
+create table donor_details
+( dcode integer NOT NULL PRIMARY KEY,
+FullName char(25) NOT NULL,
+BloodGroup char(2) NOT NULL,
+Gender char(1) NOT NULL,
+Age integer NOT NULL,
+Mobile bigint(11) NOT NULL,
+email char(25) NOT NULL);
+
+insert into donor_details values(100,'SAI SUJITHA','A+','F',17,'9898989898','sai@xyz.com');
+insert into donor_details values(101,'RAMESHVAR','O+','M',17,'9898989877','ram@xyz.com');
+insert into donor_details values(102,'VINMUGIL','B+','M',17,'9798989876','vinm@xyz.com');
+
+create table Availability
+(BloodGroup char(3) NOT NULL,
+Units char(5) NOT NULL);
+
+insert into Availability values('O+', '53' );
+insert into Availability values('A+', '22' ):
+insert into Availability values('O-', '2' );
+insert into Availability values('B+', '12' );
+insert into Availability values('B-', '13' );
+insert into Availability values('A-', '10' );
+insert into Availability values('AB+', '10' );
+insert into Availability values('AB-', '5' );
+
+
